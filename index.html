@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TGC – Digital Historik</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container hero">
+      <h1>Se din offentliga historia – på 30 sekunder.</h1>
+      <h2>Skriv ditt namn eller ladda upp en bild för att förstå hur du syns online.</h2>
+      <form class="search-group" aria-label="Sökformulär">
+        <input class="search-input" type="text" name="query" placeholder="Ange namn eller profil" />
+      </form>
+      <div class="cta-group">
+        <button class="cta-button" type="button">Få gratis snapshot</button>
+        <a class="secondary-link" href="#" id="open-consent">Ladda upp en bild istället</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <h2 class="section-title">Allt på ett ställe.</h2>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon">🔍</div>
+            <h3>Snabba sökningar</h3>
+            <p>Få en direkt överblick av dina senaste omnämnanden och profiler.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📊</div>
+            <h3>Reach &amp; impact</h3>
+            <p>Förstå hur många som sett ditt namn, och var de befinner sig.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔐</div>
+            <h3>GDPR-säkert</h3>
+            <p>Vi hanterar din data med högsta säkerhet och transparens.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Uppdateras live</h3>
+            <p>Automatiska bevakningar för att du alltid ska ligga steget före.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#">Integritet</a>
+          <a href="#">Användarvillkor</a>
+          <a href="#">Support</a>
+        </nav>
+        <small>&copy; 2024 TGC Digital. Alla rättigheter förbehållna.</small>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="consent-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal">
+        <h3>Samtycke för bilduppladdning</h3>
+        <p><strong>Viktigt:</strong> Genom att ladda upp en bild godkänner du att vi analyserar den för att hitta relevanta träffar i offentliga källor.</p>
+        <p>Vi sparar aldrig bilden permanent och du kan begära radering när som helst.</p>
+        <div class="modal-actions">
+          <button class="button-secondary" id="close-consent" type="button">Avbryt</button>
+          <button class="cta-button" type="button">Jag samtycker &amp; Ladda upp</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const consentModal = document.getElementById('consent-modal');
+      const openConsent = document.getElementById('open-consent');
+      const closeConsent = document.getElementById('close-consent');
+
+      const toggleModal = (show) => {
+        if (!consentModal) return;
+        if (show) {
+          consentModal.classList.add('active');
+          consentModal.setAttribute('aria-hidden', 'false');
+        } else {
+          consentModal.classList.remove('active');
+          consentModal.setAttribute('aria-hidden', 'true');
+        }
+      };
+
+      openConsent?.addEventListener('click', (event) => {
+        event.preventDefault();
+        toggleModal(true);
+      });
+
+      closeConsent?.addEventListener('click', () => toggleModal(false));
+
+      consentModal?.addEventListener('click', (event) => {
+        if (event.target === consentModal) {
+          toggleModal(false);
+        }
+      });
+    </script>
+  </body>
+</html>

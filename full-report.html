@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Rapport – TGC Digital</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="dashboard-header">
+        <div>
+          <h1>Full rapport</h1>
+          <p>Din fullständiga digitala historik, uppdaterad i realtid.</p>
+        </div>
+        <div class="reach-score" aria-label="Public Reach score">72/100</div>
+      </header>
+
+      <section class="dashboard-grid">
+        <article class="dashboard-card">
+          <h2>Sentiment-analys</h2>
+          <div class="placeholder-chart" aria-hidden="true"></div>
+          <ul>
+            <li><span class="sentiment-dot sentiment-positive"></span> Positiv (45%)</li>
+            <li><span class="sentiment-dot sentiment-neutral"></span> Neutral (35%)</li>
+            <li><span class="sentiment-dot sentiment-negative"></span> Negativ (20%)</li>
+          </ul>
+        </article>
+
+        <article class="dashboard-card">
+          <h2>Tidslinje</h2>
+          <div class="placeholder-chart" aria-hidden="true"></div>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <strong>April 2024</strong>
+              <span>Ny intervju i Techpodden.</span>
+            </div>
+            <div class="timeline-item">
+              <strong>Februari 2024</strong>
+              <span>Artikel i Dagens Affärer.</span>
+            </div>
+            <div class="timeline-item">
+              <strong>December 2023</strong>
+              <span>Lansering av nytt SaaS-projekt.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="dashboard-card" style="grid-column: 1 / -1;">
+          <h2>Alla omnämnanden</h2>
+          <div class="result-list">
+            <article class="result-card">
+              <div class="result-meta">
+                <span class="sentiment-dot sentiment-positive" aria-hidden="true"></span>
+                <span class="sentiment-label">Positiv</span>
+                <span>forbes.se</span>
+                <time datetime="2024-03-12">12 mar 2024</time>
+              </div>
+              <h3>Startup grundare prisas internationellt</h3>
+              <p>Detaljerad översikt av artikeln och dess räckvidd.</p>
+            </article>
+            <article class="result-card">
+              <div class="result-meta">
+                <span class="sentiment-dot sentiment-neutral" aria-hidden="true"></span>
+                <span class="sentiment-label">Neutral</span>
+                <span>breakit.se</span>
+                <time datetime="2024-02-06">6 feb 2024</time>
+              </div>
+              <h3>Breakit listar de hetaste grundarna 2024</h3>
+              <p>Sammanfattning av omnämnandet och dess påverkan.</p>
+            </article>
+            <article class="result-card">
+              <div class="result-meta">
+                <span class="sentiment-dot sentiment-negative" aria-hidden="true"></span>
+                <span class="sentiment-label">Negativ</span>
+                <span>forum.se</span>
+                <time datetime="2023-11-24">24 nov 2023</time>
+              </div>
+              <h3>Diskussionstråd: produktfeedback</h3>
+              <p>Rå data från forumet inklusive sammanhang.</p>
+            </article>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
