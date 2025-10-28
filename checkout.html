@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitala Historian – Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="top-nav" aria-label="Huvudnavigation">
+      <a class="brand" href="index.html">Digitala Historian</a>
+      <a class="nav-link" href="report-full.html">Till dashboard</a>
+    </nav>
+  </header>
+  <main>
+    <section class="checkout" aria-labelledby="checkout-title">
+      <h1 id="checkout-title">Välj plan.</h1>
+      <form class="checkout-form">
+        <fieldset class="checkout-options">
+          <legend class="visually-hidden">Tillgängliga planer</legend>
+          <label class="price-card">
+            <input type="radio" name="plan" value="single" checked>
+            <div>
+              <p class="price">49 kr</p>
+              <p class="description">Engångsrapport</p>
+            </div>
+          </label>
+          <label class="price-card">
+            <input type="radio" name="plan" value="bundle">
+            <div>
+              <p class="price">199 kr</p>
+              <p class="description">Paket (5 sökningar)</p>
+            </div>
+          </label>
+          <label class="price-card is-disabled">
+            <input type="radio" name="plan" value="subscription" disabled>
+            <div>
+              <p class="price">99 kr/mån</p>
+              <p class="description">Prenumeration <span class="future">Framtida plan</span></p>
+            </div>
+          </label>
+        </fieldset>
+
+        <section class="card payment-card" aria-labelledby="payment-title">
+          <h2 id="payment-title">Betalning</h2>
+          <div id="stripe-placeholder" aria-live="polite">Stripe-element kommer att bäddas in här.</div>
+          <button type="submit" class="cta-button">Betala säkert</button>
+          <p class="note">Säker betalning. Kortdata lagras aldrig på våra servrar.</p>
+        </section>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav aria-label="Sidfot">
+      <a href="#">Integritet</a>
+      <a href="#">Användarvillkor</a>
+      <a href="#">Kontakt</a>
+    </nav>
+    <p>© Digitala Historian</p>
+  </footer>
+</body>
+</html>

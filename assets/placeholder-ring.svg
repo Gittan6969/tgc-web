@@ -1,0 +1,7 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Placeholder för ringdiagram</title>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#F5F5F7" stroke-width="20" />
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#007AFF" stroke-width="20" stroke-linecap="round" stroke-dasharray="140 237" transform="rotate(-90 100 100)" />
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#C7C7CC" stroke-width="20" stroke-linecap="round" stroke-dasharray="120 257" transform="rotate(40 100 100)" />
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#FF9500" stroke-width="20" stroke-linecap="round" stroke-dasharray="80 297" transform="rotate(140 100 100)" />
+</svg>
