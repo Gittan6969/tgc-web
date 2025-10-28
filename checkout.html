@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout – TGC Digital</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Välj din plan</h1>
+        <p>Bekräfta köp och lås upp hela din rapport.</p>
+
+        <form class="checkout-options" aria-label="Prisplaner">
+          <label class="checkout-option">
+            <input type="radio" name="plan" value="single" checked />
+            <div>
+              <strong>49 kr – Engångsrapport</strong>
+              <p>Full rapport och uppföljning i 7 dagar.</p>
+            </div>
+          </label>
+
+          <label class="checkout-option">
+            <input type="radio" name="plan" value="bundle" />
+            <div>
+              <strong>199 kr – 3-pack</strong>
+              <p>Håll koll på ditt team med tre rapporter.</p>
+            </div>
+          </label>
+
+          <label class="checkout-option future">
+            <input type="radio" name="plan" value="subscription" disabled />
+            <div>
+              <strong>99 kr/månad – Prenumeration</strong>
+              <p>Framtida plan – återkom snart.</p>
+            </div>
+          </label>
+        </form>
+
+        <div class="payment-form" aria-label="Betalningsinformation">
+          <label>
+            Namn på kortet
+            <input class="input-field" type="text" name="card_name" placeholder="För- och efternamn" />
+          </label>
+          <label>
+            Kortnummer
+            <input class="input-field" type="text" name="card_number" placeholder="1234 5678 9012 3456" />
+          </label>
+          <div class="form-row">
+            <label style="flex: 1 1 150px;">
+              Giltigt till
+              <input class="input-field" type="text" name="card_expiry" placeholder="MM/ÅÅ" />
+            </label>
+            <label style="flex: 1 1 150px;">
+              CVC
+              <input class="input-field" type="text" name="card_cvc" placeholder="123" />
+            </label>
+          </div>
+        </div>
+
+        <button class="cta-button" type="submit">Bekräfta köp</button>
+        <p class="checkout-footer">Säker betalning via Stripe. Din data krypteras end-to-end.</p>
+      </section>
+    </main>
+  </body>
+</html>
