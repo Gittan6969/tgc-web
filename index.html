@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitala Historian – Offentlig översikt</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="top-nav" aria-label="Huvudnavigation">
+      <a class="brand" href="index.html">Digitala Historian</a>
+      <a class="nav-link" href="report-snapshot.html">Visa snapshot</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Se din offentliga historia – på 30 sekunder.</h1>
+        <p>Skriv ditt namn eller ladda upp en bild så kartlägger vi din offentliga närvaro.</p>
+        <form class="search-form" action="report-snapshot.html" method="get">
+          <label class="visually-hidden" for="hero-search">Sök namn</label>
+          <input id="hero-search" type="text" name="query" placeholder="Sök efter namn" required>
+          <div class="hero-actions">
+            <a class="cta-button" href="report-snapshot.html">Få gratis snapshot</a>
+            <button type="button" class="btn-secondary" data-open-modal="gdpr-modal">Ladda upp bild</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <div class="section-header">
+        <h2 id="features-title">Allt på ett ställe.</h2>
+        <p>Digitala Historian samlar alla viktiga datapunkter för att du ska få kontroll.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="card">
+          <h3>Snabb översikt</h3>
+          <p>Se reach, sentiment och källor.</p>
+        </article>
+        <article class="card">
+          <h3>Tryggt &amp; GDPR</h3>
+          <p>Samtycke och DSAR inbyggt.</p>
+        </article>
+        <article class="card">
+          <h3>Tidslinje</h3>
+          <p>Förstå när omnämnanden sker.</p>
+        </article>
+        <article class="card">
+          <h3>Källkoll</h3>
+          <p>Direktlänkar till originalkällor.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav aria-label="Sidfot">
+      <a href="#">Integritet</a>
+      <a href="#">Användarvillkor</a>
+      <a href="#">Kontakt</a>
+    </nav>
+    <p>© Digitala Historian</p>
+  </footer>
+
+  <div class="modal-backdrop" id="gdpr-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="gdpr-modal-title">
+      <h2 id="gdpr-modal-title">Bilduppladdning – Samtycke</h2>
+      <p><strong>Viktigt:</strong> Genom att ladda upp en bild intygar du att du har rätt att använda den och att vi får behandla den enligt vår GDPR-policy.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" data-close-modal>Avbryt</button>
+        <button type="button" class="cta-button">Jag samtycker &amp; Ladda upp</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

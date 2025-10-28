@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitala Historian – Full rapport</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="top-nav" aria-label="Huvudnavigation">
+      <a class="brand" href="index.html">Digitala Historian</a>
+      <a class="nav-link" href="checkout.html">Uppgradera</a>
+    </nav>
+  </header>
+  <main>
+    <section class="dashboard" aria-labelledby="dashboard-title">
+      <h1 id="dashboard-title" class="visually-hidden">Full rapport</h1>
+      <div class="card">
+        <h2>Reach Score</h2>
+        <p class="score">72/100</p>
+        <p>Din offentliga påverkan ligger över genomsnittet för din kategori.</p>
+      </div>
+
+      <div class="card sentiment-card">
+        <h2>Sentiment-analys</h2>
+        <img src="assets/placeholder-ring.svg" alt="Plats för ringdiagram som visar sentimentfördelning">
+        <ul class="sentiment-legend">
+          <li><span class="legend-chip legend-chip--positive"></span> Blå = Positiv</li>
+          <li><span class="legend-chip legend-chip--neutral"></span> Grå = Neutral</li>
+          <li><span class="legend-chip legend-chip--negative"></span> Orange = Negativ</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Tidslinje för omnämnanden</h2>
+        <img src="assets/placeholder-line.svg" alt="Plats för linjediagram över omnämnanden över tid" class="timeline">
+      </div>
+
+      <div class="card">
+        <h2>Alla omnämnanden</h2>
+        <ul class="mentions-list">
+          <li>
+            <h3>Internationell artikel</h3>
+            <p><a href="#">https://globalmedia.com/story</a></p>
+            <p>Datum: 2024-03-05</p>
+            <span class="sentiment-chip sentiment--positive">Positiv</span>
+          </li>
+          <li>
+            <h3>Forumdiskussion</h3>
+            <p><a href="#">https://forum.se/tråd</a></p>
+            <p>Datum: 2024-02-21</p>
+            <span class="sentiment-chip sentiment--neutral">Neutral</span>
+          </li>
+          <li>
+            <h3>Recension</h3>
+            <p><a href="#">https://recensioner.se/post</a></p>
+            <p>Datum: 2024-01-30</p>
+            <span class="sentiment-chip sentiment--negative">Negativ</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav aria-label="Sidfot">
+      <a href="#">Integritet</a>
+      <a href="#">Användarvillkor</a>
+      <a href="#">Kontakt</a>
+    </nav>
+    <p>© Digitala Historian</p>
+  </footer>
+</body>
+</html>
